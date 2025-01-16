@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIOS</title>
+    <script src="Ejercicios.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            
+            justify-content: center;
+            background-color: #0056b3;
+        }
+
+        nav ul li {
+            margin: 0 0.5rem;
+            max-height: 80px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: flexbox;
+            flex-wrap: wrap;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #004094;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .preguntas p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .preguntas h1 {
+            font-size: 1.5rem;
+            color: #007BFF;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>EJEMPLOS CONDICIONALES</h1>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" onclick="puedeVotar(event)">PUNTO 1</a>
+                    <a href="#" onclick="licencia(event)">PUNTO 2</a>
+                    <a href="" onclick="paroimpar(event)">PUNTO 3</a>
+                    <a href="" onclick="mayorOMenorDeEdad(event)">PUNTO 4</a>
+                    <a href="" onclick="pasaono(event)">PUNTO 5</a>
+                    <a href="" onclick="pone0(event)">PUNTO 6</a>
+                    <a href="" onclick="descuento(event)">PUNTO 7</a>
+                    <a href="" onclick="temporadas(event)">PUNTO 8</a>
+                    <a href="" onclick="invitacion(event)">PUNTO 9</a>
+                    <a href="" onclick="bisio(event)">PUNTO 10</a>
+                    <a href="" onclick="cerveza(event)">PUNTO 11</a>
+                    <a href="" onclick="edad(event)">PUNTO 12</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container">
+            <div class="preguntas">
+                <p>
+                <h1><b>Ejercicios Practicos</b></h1>
+                1. Ejercicio 1: Crea un programa que determine si una persona es elegible para votar. La persona puede
+                votar si tiene 18 años o más.
+                <br><br> 2. Ejercicio 2: Escribe un programa que determine si una persona puede conducir, es decir, si
+                tiene 18 años o más.
+                <br><br> 3. Ejercicio 3: Dado un número, escribe un programa que imprima si es par o impar.
+                <br><br> 4. Ejercicio 4: Crea un programa que indique si una persona es mayor de edad o menor de edad,
+                dependiendo de su edad.
+                <br><br> 5. Ejercicio 5: Crea un programa que determine si un estudiante aprobó o no una asignatura. Si
+                su calificación es 6 o más, aprueba, si no, suspende.
+                <br><br> 6. Ejercicio 6: Escribe un programa que determine si un número es positivo, negativo o cero.
+                <br><br> 7. Ejercicio 7: Crea un programa que determine si una persona tiene derecho a un descuento. Si
+                tiene menos de 18 años o más de 65, tiene descuento.
+                <br><br> 8. Ejercicio 8: Dado un mes (como número: 1-12), determina si es invierno, primavera, verano u
+                otoño.
+                <br><br> 9. Ejercicio 9: Escribe un programa que verifique si una persona tiene una invitación a una
+                fiesta. Si tiene una invitación, imprime "Puedes asistir"; si no, imprime "No puedes asistir".
+                <br><br> 10. Ejercicio 10: Dado un año, determina si es bisiesto o no. Un año es bisiesto si es
+                divisible por 4, pero no por 100, a menos que también sea divisible por 400.
+                <br><br> 11. Ejercicio 11: Crea un programa que indique si una persona puede comprar alcohol. Una
+                persona puede comprar alcohol si tiene 18 años o más.
+                <br><br> 12. Ejercicio 12: Crea un programa que determine si una persona es un adulto joven (18-35
+                años), un adulto (36-64 años) o una persona mayor (65 años o más).
+                </p>
+            </div>
+        </section>
+    </main>
+
+
+
+
+</body>
+</html>

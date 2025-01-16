@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor {
+
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+            background-color: bisque;
+        }
+
+        .cajas {
+            background-color: aqua;
+            color: white;
+            padding: 20px;
+        }
+
+        .contenedor-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="cajas">Caja1</div>
+        <div class="cajas">Caja2</div>
+        <div class="cajas">Caja3</div>
+
+    </div>
+    <hr>
+    <div class="contenedor-grid">
+        <div class="cajas">Caja1</div>
+        <div class="cajas">Caja2</div>
+        <div class="cajas">Caja3</div>
+        <div class="cajas">Caja4</div>
+        <div class="cajas">Caja5</div>
+        <div class="cajas">Caja6</div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Simple</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            display: flex;
+            margin: 20px;
+        }
+
+        section,
+        aside {
+            padding: 20px;
+            background: #fff;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        article {
+            margin-bottom: 20px;
+        }
+
+        article h2 {
+            color: #333;
+        }
+
+        article time {
+            display: block;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        article figure {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        article figure img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        article figure figcaption {
+            text-align: center;
+            color: #555;
+            font-style: italic;
+        }
+
+        aside {
+            flex: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        form input[type="submit"] {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Mi Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#articulos">Artículos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="articulos">
+            <article>
+                <h2>El Poder de una Buena Lectura</h2>
+                <time datetime="2024-12-12">Publicado el 12 de diciembre de 2024</time>
+                <p>
+                    Leer es una de las actividades más enriquecedoras que podemos realizar. No solo amplía nuestro
+                    conocimiento, sino que también mejora nuestra imaginación y empatía. Sumergirse en un buen libro
+                    puede llevarnos a mundos fantásticos, hacernos vivir historias emocionantes y enseñarnos lecciones
+                    valiosas. ¿Cuál es tu libro favorito y por qué?
+                </p>
+                <figure>
+                    <center>
+                        <img src="./img/art1.jpg" alt="Libro con un cerebro">
+                        <figcaption>Libro con un cerebro</figcaption>
+                    </center>
+                </figure>
+            </article>
+
+            <article>
+                <h2>Los Beneficios del Ejercicio Regular</h2>
+                <time datetime="2024-12-11">Publicado el 11 de diciembre de 2024</time>
+                <p>Hacer ejercicio regularmente tiene numerosos beneficios para la salud, tanto física como mental.
+                    Desde mejorar la condición cardiovascular y fortalecer los músculos hasta reducir el estrés y la
+                    ansiedad, el ejercicio es una práctica que todos deberíamos incorporar en nuestra rutina diaria.
+                    ¿Has probado alguna vez un deporte nuevo? ¡Podría ser una gran forma de mantenerte activo y
+                    entretenido!
+                </p>
+                <figure>
+                    <center>
+                        <img src="./img/art2.jpg" alt="Persona haciendo ejercicio">
+                        <figcaption>Persona haciendo ejercicio</figcaption>
+                    </center>
+                </figure>
+            </article>
+
+            <article>
+                <h2>La Importancia de la Alimentación Saludable</h2>
+                <time datetime="2024-12-10">Publicado el 10 de diciembre de 2024</time>
+                <p>Una alimentación saludable es fundamental para mantener un cuerpo y mente sanos. Consumir una dieta
+                    balanceada rica en frutas, verduras, proteínas y granos enteros puede ayudar a prevenir enfermedades
+                    y mejorar la calidad de vida. Además, cocinar en casa nos permite controlar los ingredientes y las
+                    porciones, asegurando que comemos de manera consciente y saludable. ¿Cuál es tu receta saludable
+                    favorita?
+                </p>
+                <figure>
+                    <center>
+                        <img src="./img/art3.jpg" alt="Alimentos saludables">
+                        <figcaption>Alimentos saludables</figcaption>
+                    </center>
+                </figure>
+            </article>
+        </section>
+
+        <aside>
+            <h2>Categorías</h2>
+            <ul>
+                <li><a href="#categoria1">Deportes</a></li>
+                <li><a href="#categoria2">Entretenimiento</a></li>
+                <li><a href="#categoria3">Tecnologia</a></li>
+            </ul>
+
+            <h2>Artículos Recientes</h2>
+            <ul>
+                <li><a href="#articulo1">Descubriendo la Magia de la Lectura Nocturna</a></li>
+                <li><a href="#articulo2">Claves para una Vida Saludable: Ejercicio y Alimentación</a></li>
+                <li><a href="#articulo3">Tecnologías que Transformarán el Futuro</a></li>
+            </ul>
+        </aside>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form action="enviar_formulario.html" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre"><br><br>
+
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo"><br><br>
+
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea><br><br>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contacto: correo@ejemplo.com</p>
+        <p>&copy; 2024 Mi Blog. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>

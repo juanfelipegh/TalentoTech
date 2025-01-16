@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Web Multimedia</title>
+  <style>
+    .boton-flotante {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0073e6;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .boton-flotante:hover {
+      background-color: #218838;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="./index.html"><button class="boton-flotante"><--</button></a>
+  <center>
+    <h1>Bienvenido a mi Página Web</h1>
+
+    <!-- Enlaces internos -->
+    <a href="#seccion1">Ir a la Sección 1</a> |
+    <a href="#seccion2">Ir a la Sección 2</a>
+
+    <hr>
+
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" target="_blank">Material de apoyo</a>
+
+    <hr>
+    <!-- Sección 1 -->
+    <h2 id="seccion1">Sección 1: Imagen</h2>
+    <figure>
+      <img src="./img/imagen1.jpg" alt="Foto del atardecer" width="500">
+      <figcaption>Atardecer en la playa.</figcaption>
+    </figure>
+
+    <!-- Sección 2 -->
+    <h2 id="seccion2">Sección 2: Video</h2>
+    <video src="./video/video.mp4" controls width="500">
+      Tu navegador no soporta el video.
+    </video>
+
+    <hr>
+
+    <!-- Incluir un video de YouTube con iframe -->
+    <h2>Video de YouTube</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0gGQ7FuMMU0?si=2hgGAYXER-iZgeKB"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr>
+
+    <!-- Incluir un archivo PDF -->
+    <h2>Documento PDF</h2>
+    <embed src="./doc/Guía de trabajo.pdf" type="application/pdf" width="600" height="400">
+  </center>
+</body>
+
+</html>

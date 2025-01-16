@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feria Científica Escolar</title>
+    <style>
+        .boton-flotante {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .boton-flotante:hover {
+            background-color: #218838;
+            transform: scale(1.1);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background: #0073e6;
+            color: #fff;
+            padding: 20px 10px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #005bb5;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #0073e6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #0073e6;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #005bb5;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="./index.html"><button class="boton-flotante"><--</button></a>
+    <header>
+        <h1>Feria Científica Escolar</h1>
+        <p>Explora, Aprende y Participa</p>
+    </header>
+    <nav>
+        <a href="#informacion">Información General</a>
+        <a href="#actividades">Actividades y Talleres</a>
+        <a href="#recursos">Recursos Adicionales</a>
+    </nav>
+    <section id="informacion">
+        <h2>Información General</h2>
+        <p>La Feria Científica Escolar se llevará a cabo el <strong>15 de junio de 2024</strong>, en las instalaciones
+            de la escuela. Este evento tiene como objetivo presentar los proyectos de los estudiantes, inspirar el
+            aprendizaje y fomentar la curiosidad por la ciencia y el arte.</p>
+        <p>¡Te invitamos a ser parte de este día lleno de descubrimientos!</p>
+    </section>
+    <section id="actividades">
+        <h2>Actividades y Talleres</h2>
+        <ul>
+            <li>Demostraciones de reacciones químicas.</li>
+            <li>Taller de robótica básica.</li>
+            <li>Creación de cohetes de agua.</li>
+            <li>Simulaciones de terremotos.</li>
+            <li>Conferencia: "El cambio climático y sus soluciones".</li>
+        </ul>
+        <a href="#" class="btn">Inscríbete aquí</a>
+    </section>
+    <section id="recursos">
+        <h2>Recursos Adicionales</h2>
+        <p>Consulta guías y materiales adicionales para prepararte para la feria.</p>
+        <ul>
+            <li><a href="https://cienciaenlaescuela.com" target="_blank">Ciencia en la Escuela</a></li>
+            <li><a href="https://reciclajecreativo.com" target="_blank">Taller de Reciclaje Creativo</a></li>
+            <li><a href="https://astronomiaescolar.org" target="_blank">Recursos de Astronomía</a></li>
+        </ul>
+    </section>
+
+</body>
+
+</html>

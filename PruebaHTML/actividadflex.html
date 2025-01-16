@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Delicioso</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 1rem;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #495057;
+        }
+        main {
+            padding: 20px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        .gallery img {
+            width: 100%;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .menu-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            flex: 1 1 calc(25% - 20px);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .menu-item img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .menu-item:hover {
+            transform: scale(1.05);
+            background-color: #f1f1f1;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        /* Media Queries */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        @media (max-width: 480px) {
+            .menu-item {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Restaurante Delicioso</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="galeria" class="gallery">
+            <img src="./img/plato1.jpg" alt="Plato 1">
+            <img src="./img/plato2.jpg" alt="Plato 2">
+            <img src="./img/plato3.jpg" alt="Plato 3">
+            <img src="./img/plato4.jpg" alt="Plato 4">
+            <img src="./img/plato5.webp" alt="Plato 5">
+            <img src="./img/plato6.jpg" alt="Plato 6">
+        </section>
+
+        <section id="menu" class="menu">
+            <div class="menu-item">
+                <h2>Entrante 1</h2>
+                <img src="./img/plato6.jpg" alt="Entrante 1">
+                <p>Delicioso plato de garbanzos gratinados</p>
+                <p><strong>Precio: $10</strong></p>
+            </div>
+            <div class="menu-item">
+                <h2>Plato Principal 1</h2>
+                <img src="./img/plato4.jpg" alt="Plato Principal 1">
+                <p>Bandeja paisa clasica</p>
+                <p><strong>Precio: $20</strong></p>
+            </div>
+            <div class="menu-item">
+                <h2>Flan de Maracuya</h2>
+                <img src="./img/postre1.jpg" alt="Postre 1">
+                <p>Delicioso flan con sabor a maracuya</p>
+                <p><strong>Precio: $8</strong></p>
+            </div>
+            <div class="menu-item">
+                <h2>Jugos Naturales</h2>
+                <img src="./img/bebidas.jpg" alt="Bebida 1">
+                <p>Deliciosos batidos de Jugo Naturales</p>
+                <p><strong>Precio: $5</strong></p>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form action="enviar_formulario.html" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo">
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Dirección: Calle Falsa 123, Ciudad</p>
+        <p>Teléfono: 123-456-7890</p>
+        <p>Email: contacto@restaurante.com</p>
+    </footer>
+</body>
+</html>
+
+

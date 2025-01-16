@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .out-of-stock {
+            background-color: #f8d7da;
+        }
+
+        .low-stock {
+            background-color: #fff3cd;
+        }
+
+        .in-stock {
+            background-color: #d4edda;
+        }
+
+        .boton {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .boton:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script src="base.js"></script>
+    <title>Tienda</title>
+</head>
+
+<body>
+    <h1>Inventario de Productos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Código</th>
+                <th>Cantidad</th>
+                <th>Estado</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody id="inventario-body"> <!-- El inventario se cargará aquí --> </tbody>
+    </table>
+    <script>
+
+
+        function mostrarInventario() {
+            let tbody = document.getElementById('inventario-body'); tbody.innerHTML = '';
+            // Limpiar el contenido existente 
+            inventario.forEach(producto => {
+
+                let estado = verificarStock(producto);
+
+                let claseEstado = "hola";
+                if (producto.cantidad == 0) {
+                    claseEstado = "Producto agotado";
+                    console.log(`${producto.nombre} (${producto.codigo}) (${producto.cantidad}): Producto agotado`);
+                } else if (producto.cantidad <= 5) {
+                    claseEstado = "Producto pronto a agotarse";
+                    console.log(`${producto.nombre} (${producto.codigo}) (${producto.cantidad}): Próximo a agotarse`);
+                } else {
+                    claseEstado = "in-Stock";
+                    console.log(`${producto.nombre} (${producto.codigo}) (${producto.cantidad}): En stock`);
+                }
+                let fila = `<tr class="${claseEstado}"> 
+            <td>${producto.nombre}</td> 
+            <td>${producto.codigo}</td> 
+            <td>${producto.cantidad}</td> 
+            <td>${claseEstado}</td> 
+            <td>${producto.precio} </td></tr>`;
+                tbody.innerHTML += fila;
+            });
+            function recargarinve() {
+                // Guardar el inventario en localStorage para mantener los cambios 
+                localStorage.setItem("inventario", JSON.stringify(inventario));
+                // Recuperar el inventario de localStorage 
+                let inventarioGuardado = JSON.parse(localStorage.getItem("inventario"));
+                console.log("Inventario recuperado de localStorage:", inventarioGuardado);
+                // Mostrar el inventario al cargar la página 
+                document.addEventListener("DOMContentLoaded", mostrarInventario);
+            }
+        }
+        // Mostrar el inventario al cargar la página 
+        mostrarInventario(); 
+    </script>
+    <a href="#" onclick="verificarStock(event)" class="boton">Verificar el Stock</a>
+    <a href="#" onclick="actualizarStock(event)" class="boton">Actualizar el Stock</a>
+    <a href="#" onclick="agregarProducto(event)" class="boton">Agregar el Stock</a>
+    <a href="#" onclick="eliminarProducto(event)" class="boton">Eliminar un producto</a>
+    <a href="#" onclick="mostrarInventario(event)" class="boton">Mostrar el inventario</a>
+    <a href="#" onclick="buscarProductoPorNombre(event)" class="boton">Buscar por nombre</a>
+    <a href="#" onclick="precioTotalInventario(event)" class="boton">Precio Total Inventario</a>
+    <a href="#" onclick="ordenarPorPrecio(event)" class="boton">Ordenar por precio</a>
+    <a href="#" onclick="hayProductosEnStock(event)" class="boton">Hay Stock?</a>
+    <a href="#" onclick="duplicarPrecioProductosEnStock(event)" class="boton">Duplicar Stock</a>
+    <a href="#" onclick="reemplazarProducto(event)" class="boton">Reemplazar Producto</a>
+
+</body>
+
+</html>

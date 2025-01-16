@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <style>
+        .boton-flotante {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .boton-flotante:hover {
+            background-color: #218838;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="./index.html"><button class="boton-flotante"> <-- </button></a>
+    <center>
+
+        <h1>Tabla de Empleados Prueba</h1>
+
+        <table border="1">
+            <!-- Encabezado de la tabla -->
+            <caption>Datos</caption>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th colspan="2">Nombre Completo</th>
+                    <th colspan="2">Direccion y Barrio</th>
+                    <th>Email</th>
+
+                </tr>
+            </thead>
+
+            <!-- Cuerpo de la tabla -->
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Juan Felipe</td>
+                    <td>Gutierrez</td>
+                    <td>calle 8a# 20-28</td>
+                    <td>Bretaña</td>
+                    <td>felipejuan98@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Juan Felipe</td>
+                    <td>Gutierrez</td>
+                    <td>calle 8a# 20-28</td>
+                    <td>Bretaña</td>
+                    <td>felipejuan98@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Juan Felipe</td>
+                    <td>Gutierrez</td>
+                    <td>calle 8a# 20-28</td>
+                    <td>Bretaña</td>
+                    <td>felipejuan98@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+
+
+        <h1>Actividad</h1>
+        <form action="" method="post">
+            <table border="1">
+                <!-- Encabezado de la tabla -->
+                <caption>Factura</caption>
+                <thead style="background-color: aqua;">
+                    <tr>
+                        <th colspan="2">Nombre de la Empresa</th>
+                        <th colspan="3">NIT</th>
+                        <th colspan="2">Datos del Cliente</th>
+                        <th colspan="2"># Factura</th>
+                    </tr>
+                </thead>
+                <!-- Cuerpo de la tabla -->
+                <tbody>
+                    <tr>
+                        <td colspan="2" height="20"><input type="text" name="NameE" id="nm"></td>
+                        <td colspan="3" height="20"><input type="text" name="nit" id="nit"></td>
+                        <td colspan="2" height="20"><input type="text" name="datoscliente" id="datos"></td>
+                        <td colspan="2" height="20"><input type="number" name="numerofactura" id="factura"></td>
+                    </tr>
+                    <tr style="background-color: aquamarine;">
+                        <td>ID</td>
+                        <td>Producto</td>
+                        <td colspan="4">Descripcion</td>
+                        <td>V.Unitario</td>
+                        <td>V.Total</td>
+                    </tr>
+                    <tr>
+                        <td height="20"><input type="number" name="id" id="id"></td>
+                        <td height="20"><input type="text" name="producto" id="producto"></td>
+                        <td colspan="4" height="20"><input type="text" name="" id=""></td>
+                        <td height="20"><input type="number" name="vunit" id="vunit"></td>
+                        <td height="20"><input type="number" name="vtotal" id="vtotal"></td>
+                    </tr>
+                    <tr>
+                        <td height="20"></td>
+                        <td height="20"></td>
+                        <td colspan="4" height="20"></td>
+                        <td height="20"></td>
+                        <td height="20"></td>
+                    </tr>
+                    <tr>
+                        <td height="20"></td>
+                        <td height="20"></td>
+                        <td colspan="4" height="20"></td>
+                        <td height="20"></td>
+                        <td height="20"></td>
+                    </tr>
+                    <tr>
+                        <td height="20"></td>
+                        <td height="20"></td>
+                        <td colspan="4" height="20"></td>
+                        <td height="20"></td>
+                        <td height="20"></td>
+                    </tr>
+                    <tr>
+                        <td height="20"></td>
+                        <td height="20"></td>
+                        <td colspan="4" height="20"></td>
+                        <td height="20"></td>
+                        <td height="20"></td>
+                    </tr>
+                    <tr style="background-color: greenyellow;">
+                        <td colspan="3">Sub Total</td>
+                        <td colspan="2">IVA</td>
+                        <td colspan="4">Total a Pagar</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <td colspan="3" height="20"><input type="number" name="suntotal" id="subtotal"></td>
+                    <td colspan="2" height="20"><input type="number" name="iva" id="iva"></td>
+                    <td colspan="4" height="20"><input type="number" name="total" id="total"></td>
+                </tfoot>
+            </table>
+            <input type="button" value="enviar">
+        </form>
+
+        <hr>
+
+        <h1>Formulario de Factura</h1>
+        <form action="" method="post"> <label for="nombre">Nombre del Cliente:</label> <input
+                type="text" id="nombre" name="nombre"><br><br> <label for="direccion">Dirección:</label> <input
+                type="text" id="direccion" name="direccion"><br><br> <label for="telefono">Teléfono:</label> <input
+                type="tel" id="telefono" name="telefono"><br><br> <label for="fecha">Fecha:</label> <input type="date"
+                id="fecha" name="fecha"><br><br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo de producto</th>
+                        <th>Descripción</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unitario</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><select name="categoria" id="categoria">
+                            <option value="Belleza">Belleza</option>
+                            <option value="Deporte">Deporte</option>
+                            <option value="Electronica">Electronica</option>
+                            <option value="Hogar">Hogar</option>
+                            <option value="Ropa">Ropa</option>
+                        </select></td>
+                        <td><input type="text" name="descripcion1"></td>
+                        <td><input type="number" name="cantidad1"></td>
+                        <td><input type="number" step="0.01" name="precio1"></td>
+                        <td><input type="number" step="0.01" name="total1"></td>
+                    </tr>
+                    <tr>
+                        <td><select name="categoria" id="categoria">
+                            <option value="Belleza">Belleza</option>
+                            <option value="Deporte">Deporte</option>
+                            <option value="Electronica">Electronica</option>
+                            <option value="Hogar">Hogar</option>
+                            <option value="Ropa">Ropa</option>
+                        </select></td>
+                        <td><input type="text" name="descripcion2"></td>
+                        <td><input type="number" name="cantidad2"></td>
+                        <td><input type="number" step="0.01" name="precio2"></td>
+                        <td><input type="number" step="0.01" name="total2"></td>
+                    </tr> <!-- Puedes agregar más filas según sea necesario -->
+                </tbody>
+            </table> <br> <label for="total-factura">Total de la Factura:</label> <input type="number" step="0.01"
+                id="total-factura" name="total-factura"><br><br> <input type="submit" value="Enviar">
+        </form>
+
+    </center>
+</body>
+
+</html>
