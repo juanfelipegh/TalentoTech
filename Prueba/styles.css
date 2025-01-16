@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  #productos-container {
+    display: flex;
+    gap: 20px;
+  }
+
+  image {
+size: 200px;
+justify-content: center;
+  }
+
+  .producto {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+  }
+  
+  #carrito {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px;
+    margin-top: 20px;
+  }
+  
+  #carrito ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #carrito ul li {
+    margin: 10px 0;
+  }
+  
